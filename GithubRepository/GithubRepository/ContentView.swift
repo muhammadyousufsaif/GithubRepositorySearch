@@ -21,6 +21,7 @@ struct ContentView: View {
             VStack {
                 SearchBar(text: $query, isSearching: $isSearching) {
                     self.viewModel.page = 1
+                    self.viewModel.repositories.removeAll()
                     self.viewModel.fetchRepositories(searchText: $0)
                 }
                 if !viewModel.repositories.isEmpty {
@@ -42,7 +43,9 @@ struct ContentView: View {
                                 self.viewModel.fetchRepositories(searchText: self.query)
                             }) {
                                 Text("Load More")
-                            }.padding(.bottom)
+                            }
+                            .padding(.top)
+                            .padding(.bottom)
                         }
                     }
                     .onAppear {
