@@ -18,7 +18,7 @@ This is a sample application that demonstrates how to use the Github API to sear
 
 ## Installation
 1. Clone the repository
-	git clone https://github.com/<username>/github-search.git
+	git clone https://github.com/muhammadyousufsaif/GithubRepositorySearch.git
 2. Open the project in Xcode
 3. Build and run the application
 
